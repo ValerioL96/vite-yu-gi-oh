@@ -1,16 +1,25 @@
-<script >
-//import HelloWorld from './components/HelloWorld.vue'
+<script>
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue'
 
-export default{
+
+export default {
+ components:{
+  AppHeader,
+  AppMain
+ },
+
   data(){
     return{
-      
+
     }
   }
 }
 </script>
 
 <template>
+<AppHeader />
+<AppMain />
   
 </template>
 
