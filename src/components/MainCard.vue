@@ -18,7 +18,7 @@ export default{
           <article class="col-3" v-for="card in store.cards" 
           :key="card.id" :card="card">
              <div class="card w-150 mb-3">
-             <img :src="card.ygoprodeck_url" class="card-img-top" alt="...">
+             <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">
              <div class="card-body">
               <h6 class="card-title">
                 {{ card.name }}
