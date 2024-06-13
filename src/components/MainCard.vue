@@ -41,6 +41,4 @@ export default{
 
 <style scoped>
 
-article{}
-
 </style>

@@ -49,8 +49,11 @@ export default {
 <template>
 
 <main>
-    <MainCardsList v-if="loader"/>
-    <MainLoader />
+
+  <MainSelect />
+  <MainCardsList v-if="loader"/>
+  <MainLoader v-else/>
+
 </main>
   
 </template>
