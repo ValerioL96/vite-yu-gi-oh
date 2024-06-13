@@ -1,17 +1,20 @@
 <script >
 import MainSelect from './MainSelect.vue';
 import MainCardsList from './MainCardsList.vue';
+import MainLoader from './MainLoader.vue';
 import axios from 'axios';
 import { store } from '../store.js';
 
 export default {
   components:{
     MainSelect,
-    MainCardsList
+    MainCardsList,
+    MainLoader
   },
   data(){
     return{
         store,
+        loader: false,
     }
   },
   methods:{
@@ -29,10 +32,16 @@ export default {
             .finally(function () {
              // always executed
             });
+    },
+    loadInThreeSec(){
+      setTimeout(() =>{
+        this.loader=true;
+      },3000)
     }
     },
     created(){
-        this.getcards()
+        this.getcards(),
+        this.loadInThreeSec()
   }
 }
 </script>
@@ -40,7 +49,8 @@ export default {
 <template>
 
 <main>
-    <MainCardsList />
+    <MainCardsList v-if="loader"/>
+    <MainLoader />
 </main>
   
 </template>

@@ -1,11 +1,17 @@
 <script >
-import { store } from '../store.js'
+
 
 export default{
   
   data(){
     return{
-      store
+      
+    }
+  },
+  props:{
+    card:{
+      type: Array,
+      required:true
     }
   }
 }
@@ -13,29 +19,28 @@ export default{
 
 <template>
 
-<div class="col-12 bg-white p-3">
-        <div class="row">
-          <article class="col-3" v-for="card in store.cards" 
-          :key="card.id" :card="card">
-             <div class="card w-150 mb-3">
-             <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">
-             <div class="card-body">
-              <h6 class="card-title">
-                {{ card.name }}
-              </h6>
-               <p class="card-text">
-                {{ card.archetype }}
-               </p>
-             </div>
-             </div>
-             
-          </article>
-        </div>
-        
-      </div>
+<article class="card  mb-3">
+  <img :src="card.card_images[0].image_url" class="card-img-top" alt="card">
+  <div class="card-body">
+    <h6 class="card-title">
+
+      {{ card.name }}
+
+    </h6>
+    <p class="card-text">
+
+      {{ card.archetype }}
+
+    </p>
+  </div>
+</article>
+
+
   
 </template>
 
 <style scoped>
+
+article{}
 
 </style>

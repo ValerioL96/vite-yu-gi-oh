@@ -16,8 +16,9 @@ export default{
 <header>
   <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
-         <a class="navbar-brand" href="#">
-           <img src="https://th.bing.com/th/id/OIP.NhzupzQ7ZWNVs3eyiSZHEgAAAA?rs=1&pid=ImgDetMain" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+         <a class="navbar-brand fs-2" href="#">
+           <img src="https://th.bing.com/th/id/OIP.NhzupzQ7ZWNVs3eyiSZHEgAAAA?rs=1&pid=ImgDetMain" alt="Logo" 
+           width="50" height="44" class="d-inline-block align-text-top">
            Yu-Gi-Oh Api
          </a>
       </div>

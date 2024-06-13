@@ -1,6 +1,6 @@
 <script >
 import MainCard from './MainCard.vue';
-
+import { store } from '../store.js'
 
 export default{
   components:{
@@ -8,7 +8,13 @@ export default{
   },
   data(){
     return{
-
+      store
+    }
+  },
+  props:{
+    card:{
+      type: Array,
+      required:true
     }
   }
 }
@@ -19,10 +25,20 @@ export default{
 
     <div class="row">
 
-      <h5 class="col-12 p-3 bg-black text-white">
+      <h5 class="col-12 p-3 mb-0 bg-black text-white">
         Found 39 cards
       </h5>
-      <MainCard />
+      
+      <div class="col-12 bg-white ">
+        <div class="row">
+           
+          <MainCard  class="col-3" v-for="card in store.cards" 
+          :key="card.id" :card="card"/>
+             
+        </div>
+        
+      </div>
+      
 
     </div>
 
