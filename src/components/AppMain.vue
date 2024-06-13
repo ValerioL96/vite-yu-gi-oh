@@ -33,6 +33,21 @@ export default {
              // always executed
             });
     },
+    getOptions(){
+      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+            .then( (response)=> {
+              // handle success
+            console.log(response.data);
+            this.store.options = response.data;
+            })
+            .catch(function (error) {
+             // handle error
+            console.log(error);
+            })
+            .finally(function () {
+             // always executed
+            });
+    },
     loadInThreeSec(){
       setTimeout(() =>{
         this.loader=true;
@@ -41,6 +56,7 @@ export default {
     },
     created(){
         this.getcards(),
+        this.getOptions(),
         this.loadInThreeSec()
   }
 }

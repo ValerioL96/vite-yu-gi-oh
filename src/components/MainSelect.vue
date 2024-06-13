@@ -1,10 +1,13 @@
 <script >
+import { store } from '../store';
+
 
 
 export default{
   
   data(){
     return{
+      store,
 
     }
   }
@@ -15,11 +18,10 @@ export default{
 <div class="container">
   <div class="row col-2">
 
-   <select class="form-select mb-4 " aria-label="Default select example">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+   <select class="form-select mb-4 " aria-label="select">
+      <option v-for="option in store.options" 
+      :key="option.id" :option="option" >{{ option.archetype_name }}</option>
+     
    </select>
 
   </div>

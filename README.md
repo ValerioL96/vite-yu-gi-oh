@@ -27,3 +27,10 @@ Quando l'utente seleziona un valore dalla lista, viene effettuata una chiamata a
 
 1) Aggiungo un input select nel componente MainSelect
 
+2) Creo una funizione getOptions nel componente AppMain in cui avrò una chiamata all'API di Yu Gi Oh;
+
+3) importo store nel componente MainSelect;
+
+4) faccio lo stesso con un parent in questo caso AppMain;
+
+5) nel componente MainSelect creo un ciclo v-for in cui metterò il tipo di carta;
